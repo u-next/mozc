@@ -506,7 +506,7 @@
       'ldflags': [
          # -s: Strip unused symbols
          # --version-script: Remove almost all exportable symbols
-         '-Wl,-s,--version-script,<(abs_android_dir)/libmozc.lds',
+         '-Wl,-s,-z,relro,-z,now,--version-script,<(abs_android_dir)/libmozc.lds',
       ],
     },
     {
